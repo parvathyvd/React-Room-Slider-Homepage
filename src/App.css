@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;600;700&display=swap");
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--Dark-Gray);
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+header {
+  width: 100%;
+  min-height: 50vh;
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.hero__img {
+  max-width: 100%;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.logo__nav {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: #fff;
+  gap: 5rem;
+  font-weight: 400;
+  display: flex;
+}
+
+ul {
+  display: inline-block;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+li {
+  cursor: pointer;
+}
+
+li::after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 0px;
+  height: 3px;
+  transition: all 0.3s ease;
+}
+
+li:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+}
+
+h1 {
+  font-size: 5rem;
+  color: black;
+  font-weight: 400;
+  padding-bottom: 3rem;
+}
+.hero__content {
+  padding: 0rem 15%;
+}
+
+p {
+  line-height: 2rem;
+  font-weight: 300;
+}
+.btn {
+  outline: none;
+  border: none;
+  background: none;
+  padding-top: 3rem;
+}
+
+.btn-shop {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1.3rem;
+}
+.btn-shop:hover {
+  color: var(--Dark-Gray);
+}
+.btn-shop:hover svg {
+  opacity: 0.5;
+}
+.icon-shop:hover {
+  fill: #444444;
+}
+.nav__arrows {
+  display: inline-block;
+  position: absolute;
+  left: 60vw;
+  transform: translateX(7.4rem);
+  cursor: pointer;
+}
+
+.right__icon {
+  position: absolute;
+  left: 0rem;
+  bottom: 0rem;
+  background-color: black;
+  padding: 2rem 3rem;
+}
+footer {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.left__icon {
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  background-color: black;
+  padding: 2rem 3rem;
+}
+.left__icon:hover,
+.right__icon:hover {
+  background-color: #444444;
+}
+.content {
+  display: flex;
+}
+
+.about {
+  padding: 3rem 4rem;
+}
+.about h2 {
+  text-transform: uppercase;
+  color: black;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+.img-fluid {
+  max-width: 100%;
+}
+.display__mobile {
+  display: none;
+}
+.nav__links__mobile {
+  display: none;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+@media only screen and (max-width: 1300px) {
+  .hero__content h1 {
+    font-size: 3rem;
+    padding-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    width: 100%;
+    min-height: 50vh;
+    grid-template-columns: 1fr;
+  }
+  .display__mobile {
+    display: block;
+  }
+  .nav__links__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: black;
+    background: #fff;
+    padding: 5rem 1rem;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .nav-mb {
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav__links {
+    display: none;
+  }
+  .logo__nav {
+    top: 7%;
+  }
+  .logo {
+    padding-left: 50%;
+  }
+
+  .hero__content {
+    padding: 0rem 10%;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .btn-shop {
+    padding-bottom: 4rem;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+  }
+  .nav__arrows {
+    left: 85vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav__arrows {
+    left: 62vw;
+  }
+}
